@@ -143,22 +143,6 @@ iframe {
     transition: 0.4s;
 }
 
-/* Estilos para menu mobile */
-.navbar ul.mobile {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.navbar ul.mobile.show {
-    display: flex;
-}
-
 /* Estilos responsivos */
 @media only screen and (max-width: 768px) {
     body {
@@ -173,10 +157,6 @@ iframe {
     /* Esconder o menu padrão e mostrar o menu mobile quando o botão hambúrguer for ativado */
     .navbar ul {
         display: none;
-    }
-
-    .navbar ul.show {
-        display: flex;
         flex-direction: column;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.8);
@@ -186,14 +166,18 @@ iframe {
         padding: 20px 0;
     }
 
+    .navbar ul.show {
+        display: flex; /* Mostrar o menu quando a classe "show" for adicionada */
+    }
+
     .navbar li {
         margin: 10px 0;
     }
 
     .hamburger {
-        display: flex;
+        display: flex; /* Mostrar botão hambúrguer em telas menores */
     }
-
+    
     .timeline-container {
         width: 90%; /* Reduzir largura da timeline em dispositivos móveis */
         margin: 20px auto 60px auto; /* Ajuste da margin-bottom */
