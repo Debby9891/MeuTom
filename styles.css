@@ -15,7 +15,7 @@ body {
     align-items: center;
     width: 100%;
     max-width: 800px;
-    margin: 60px auto 100px auto; /* Aumentar margin-bottom para dar mais espaço */
+    margin: 60px auto;
     position: relative;
 }
 
@@ -47,7 +47,7 @@ body {
     width: 3px;
     background-color: #fdf7f0;
     top: 0;
-    bottom: 0; /* Definir a altura como dinâmica para cobrir toda a linha */
+    height: 100%;
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
@@ -86,7 +86,7 @@ iframe {
     left: 0;
     z-index: 100;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -118,7 +118,7 @@ iframe {
 
 .logo {
     height: 120px;
-    margin-left: 20px;
+    margin-right: 20px;
     vertical-align: middle;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
@@ -132,7 +132,7 @@ iframe {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .hamburger div {
@@ -155,7 +155,11 @@ iframe {
     border-radius: 10px;
 }
 
-.navbar ul.mobile.show {
+.navbar ul.mobile li {
+    margin: 10px 0;
+}
+
+.navbar ul.mobile.open {
     display: flex;
 }
 
@@ -170,24 +174,8 @@ iframe {
         padding: 10px 20px;
     }
 
-    /* Esconder o menu padrão e mostrar o menu mobile quando o botão hambúrguer for ativado */
     .navbar ul {
         display: none;
-    }
-
-    .navbar ul.show {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        position: absolute;
-        top: 100%;
-        left: 0;
-        padding: 20px 0;
-    }
-
-    .navbar li {
-        margin: 10px 0;
     }
 
     .hamburger {
@@ -196,7 +184,7 @@ iframe {
 
     .timeline-container {
         width: 90%; /* Reduzir largura da timeline em dispositivos móveis */
-        margin: 20px auto 60px auto; /* Ajuste da margin-bottom */
+        margin: 20px auto;
     }
 
     .timeline-row {
