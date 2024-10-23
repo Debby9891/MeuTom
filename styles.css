@@ -170,6 +170,7 @@ iframe {
         padding: 10px 20px;
     }
 
+    /* Esconder o menu padrão e mostrar o menu mobile quando o botão hambúrguer for ativado */
     .navbar ul {
         display: none;
     }
