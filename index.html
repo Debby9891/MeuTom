@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timeline de Vídeos</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Nunito', sans-serif;
@@ -92,19 +91,7 @@
             left: 0;
             z-index: 100;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .navbar .logo {
-            height: 120px;
-            margin-left: 20px;
-            vertical-align: middle;
-            transition: transform 0.3s ease, filter 0.3s ease;
-        }
-
-        .navbar .logo:hover {
-            transform: scale(1.1);
+            justify-content: center;
         }
 
         .navbar ul {
@@ -127,61 +114,29 @@
             font-size: 1.2em;
         }
 
-        .navbar a:hover {
-            color: #dbb3d0;
+        .navbar a:hover { color: #dbb3d0;
             transform: scale(1.1);
             transition: transform 0.3s ease;
         }
 
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            margin-right: 20px;
-        }
-
-        .hamburger div {
-            width: 25px;
-            height: 3px;
-            background-color: #fdf7f0;
-            margin: 3px 0;
-        }
-
         @media only screen and (max-width: 768px) {
-            .navbar ul {
-                display: none;
+            iframe {
+                height: 150px;
+            }
+            .timeline-row {
                 flex-direction: column;
-                width: 100%;
-                background-color: rgba(0, 0, 0, 0.8);
-                position: absolute;
-                top: 100%;
-                left: 0;
-                padding: 20px 0;
+                align-items: flex-start;
             }
-
-            .navbar ul.show {
-                display: flex;
-            }
-
-            .navbar li {
-                margin: 10px 0;
-            }
-
-            .hamburger {
-                display: flex;
+            .timeline-center {
+                margin-bottom: 20px;
             }
         }
     </style>
 </head>
 <body>
-      <div class="navbar">
-        <a href="#"><img src="Logo_site-removebg-preview.png" alt="Logo do Site" class="logo"></a>
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <ul id="navbar-links" class="mobile">
+    <div class="navbar">
+        <a href="#"><img src="Logo_site-removebg-preview.png" alt="Logo do Site" style="height: 120px; margin-right: 20px; vertical-align: middle; transition: transform 0.3s ease, filter 0.3s ease;" onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';"></a>
+        <ul>
             <li><a href="#video-inicio">Início</a></li>
             <li><a href="#video-encontro">Encontro</a></li>
             <li><a href="#video-promessa">Promessa</a></li>
@@ -231,13 +186,12 @@
                 <div class="timeline-line"></div>
                 <div class="timeline-star">&#9733;</div>
             </div>
-<div class="timeline-right">
-    <div class="timeline-year">Memórias</div>
-    <div class="timeline-message">Memórias duram para sempre e é tudo que temos na vida.</div>
-    <iframe src="https://drive.google.com/file/d/1kJPaEbrGB4q1rssPXpUabWWf0P3byD-H/preview" allow="autoplay"></iframe>
-</div>
-<!-- Fechamento da timeline-container e outros elementos do corpo -->
-
-<script src="script.js"></script>
+            <div class="timeline-right">
+                <div class="timeline-year">Memórias</div>
+                <div class="timeline-message">Memórias duram para sempre e é tudo que temos na vida.</div>
+                <iframe src="https://drive.google.com/file/d/1kJPaEbrGB4q1rssPXpUabWWf0P3byD-H/preview" allow="autoplay"></iframe>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
