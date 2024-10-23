@@ -10,7 +10,7 @@
 <body>
     <div class="navbar">
         <a href="#"><img src="Logo_site-removebg-preview.png" alt="Logo do Site" class="logo"></a>
-        <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
+        <button class="hamburger-menu" id="hamburger-menu" aria-label="Menu">&#9776;</button>
         <ul id="nav-links">
             <li><a href="#video-inicio">Início</a></li>
             <li><a href="#video-encontro">Encontro</a></li>
@@ -68,5 +68,12 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById("hamburger-menu").addEventListener("click", function() {
+            const navLinks = document.getElementById("nav-links");
+            navLinks.classList.toggle("show");
+        });
+    </script>
 </body>
 </html>
